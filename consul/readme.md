@@ -55,3 +55,7 @@ ModifyIndex: 10
 }' > ./consul.d/web.json
 ```
 
+## Запуск
+```sh
+consul agent -dev -enable-script-checks -config-dir=./consul.d
+```
