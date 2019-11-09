@@ -9,6 +9,15 @@ consul agent -dev -node maschine
 ```bash
 curl -X PUT -d 'value1' localhost:8500/v1/kv/group1/key1
 ```
+### Чтение из базы Consul
+
+```bash
+curl -X GET -d localhost:8500/v1/kv/key1
+```
+
+
+
+
 
 ## Просмотр подключений
 consul members -detailed
@@ -59,3 +68,19 @@ ModifyIndex: 10
 ```sh
 consul agent -dev -enable-script-checks -config-dir=./consul.d
 ```
+
+
+## Add Data
+First, insert or "put" some values into the KV store with the consul kv put command. The first entry after the command is the key, and the second entry is the value.
+
+```sh
+$ consul kv put redis/config/minconns 1
+Success! Data written to: redis/config/minconns
+
+$ consul kv put redis/config/maxconns 25
+Success! Data written to: redis/config/maxconns
+
+$ consul kv put -flags=42 redis/config/users/admin abcd1234
+Success! Data written to: redis/config/users/admin
+```
+
