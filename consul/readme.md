@@ -37,9 +37,21 @@ ModifyIndex: 10
 ```
  ## Просомтор информации о серврере
  dig @127.0.0.1 -p 8600 machine.node.consul
- 
- 
- 
+   
  ## Конфигурация
  создать дирректорию 
  makedir 
+ 
+ 
+ ## Конфигурация
+ $ mkdir ./consul.d
+ 
+ ```
+ $ echo '{"service":
+  {"name": "web",
+   "tags": ["rails"],
+   "port": 80
+  }
+}' > ./consul.d/web.json
+```
+
