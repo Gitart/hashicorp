@@ -1,6 +1,8 @@
 # Consul
 
 https://learn.hashicorp.com/consul/datacenter-deploy/reference-architecture
+https://eax.me/consul/
+
 
 
 ### Запуск сервера в режиме разработки   
